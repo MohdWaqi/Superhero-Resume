@@ -1,120 +1,142 @@
-*{
-    color:white;
-    font-family: 'McLaren', cursive;
-font-family: 'Poppins', sans-serif;
+* {
+  color: white;
+  font-family: "McLaren", cursive;
+  font-family: "Poppins", sans-serif;
+}
+.tablet {
+  display: none;
 }
 
-
-body{
-    background-image: url("Batman.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    
+body {
+  background-image: url("./images/Batman.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 #content {
-    width:70%;
-    margin: 30px auto 70px;
-    background-color: black;
-    opacity: 0.6;
-    border-radius: 20px;
-    padding: 50px;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
+  width: 70%;
+  margin: 30px auto 70px;
+  background-color: black;
+  opacity: 0.6;
+  border-radius: 20px;
+  padding: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
-#content > div{
-    padding: 10px 20px;
+#content > div {
+  padding: 10px 20px;
 }
 #content > div > div > h3 ~ div {
-    display:flex;
-    justify-content: space-between;    
-} 
-h3{
-    color: rgb(59, 113, 200);
-    margin:30px;
-    text-align:center;
-    font-size: 1.5rem;
-    border-bottom: 3px solid
+  display: flex;
+  justify-content: space-between;
 }
-p{
-    
+h3 {
+  color: rgb(59, 113, 200);
+  margin: 30px;
+  text-align: center;
+  font-size: 1.5rem;
+  border-bottom: 3px solid;
 }
 
-progress{
-    height: 40px;
-    width: 100px 
+progress {
+  height: 40px;
+  width: 100px;
 }
- 
-.interest{
-    background-image: url("bat.png");
+
+.interest {
+  background-image: url("bat.png");
 }
-img{
-    width: 90px;
+img {
+  width: 90px;
 }
-h1{ 
+h1 {
+  text-align: center;
+  margin: 50px;
+  font-size: 3rem;
+}
+span {
+  color: red;
+}
+@media all and (min-width: 320px) and (max-width: 750px) {
+  #content {
+    grid-template-columns: repeat(2, 1fr);
+    direction: rtl;
+    margin-top: 0px;
+    padding: 5%;
+    grid-auto-rows: min-content;
+    width: min-content;
+    grid-gap: even;
+  }
+
+  #content > div,
+  #content p {
+    font-size: 0.7rem;
+    height: max-content;
+  }
+  #content > div {
+    padding: 0% 5%;
+  }
+  * {
     text-align: center;
-    margin: 50px;
-    font-size:3rem;
-}
-span{
-    color: red;
-}
-@media all and (min-width:320px) and (max-width:750px){
-    #content{
-        grid-template-columns: repeat(2, 1fr);
-        direction:rtl;
-        gap: 20px
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
+  #content > div > div > h3 ~ div {
+    display: flex;
+    justify-content: space-between;
+  }
+  h1 {
+    font-size: 2rem;
+  }
 
-    }
-    #content > div{
-        padding: 0px;
-    }
-    *{
-        text-align: center;
-    }
-    h3{
-       font-size:1.2rem; 
-    }
-    #content > div > div > h3 ~ div {
-        display:flex;
-        justify-content: space-between;    
-    } 
-    h1{
-        font-size:2.5rem;
-    }
-    p{
-        font-size:1rem;
-    }
-    progress, .description{
-        display:none
-    }
-    h3~ div{
-        border-right:1px solid ;
-        padding-right:10px;
-    }
-    .heading{
-        display:flex;
-        justify-content: center;
-        width:80%;
-        margin: auto;
+  progress,
+  .description {
+    display: none;
+  }
+  h3 ~ div {
+    border-right: 1px solid;
+    padding-right: 20%;
+  }
+  .heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .heading > img {
+    width: 40%;
+    height: 50%;
+    margin-left: 10%;
+    border-radius: 50%;
+  }
+  .wide {
+    grid-column: span 2;
+  }
+  .interest img {
+    width: 30%;
+  }
 
-    }
-    .heading > img{
-        width:50%;
-        height:50%;
-        border-radius:50%;
-    }
-    
+  .interest {
+    padding-right: 5px;
+  }
 }
-@media all and (min-width:751px) and (max-width:1080px) {
-    #content{
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .heading > img{
-        display:none;
-    }
+@media all and (min-width: 751px) and (max-width: 1080px) {
+  #content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .heading > img {
+    display: none;
+  }
+  .education,
+  .certificate {
+    display: none;
+  }
+  .tablet {
+    display: block;
+  }
 }
-@media all and (min-width:1081px) {
-    .heading > img{
-        display:none;
-    }
+@media all and (min-width: 1081px) {
+  .heading > img {
+    display: none;
+  }
 }
